@@ -1,33 +1,7 @@
-Organization*
-amar-edu
-Repository*
-Deployment-and-Github---Student-App
-Branch*
-main
-Build
-Runtime stack
-Java
-Version
-8.0
-Java web server stack
-Java SE
-Authentication settings
-Select how you want your GitHub Action workflow to authenticate to Azure. If you choose user-assigned identity, the identity will be automatically created and federated with GitHub as an authorized client. Learn more
-
-Authentication type*
-
-
-Workflow Configuration
-File with the workflow configuration defined by the settings above.
-
-Workflow Configuration
-File path: .github/workflows/main_StudentSpringBootApp.yml
-
-If an existing workflow configuration exists, it will be overwritten.
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - StudentSpringBootApp
+name: Build and deploy JAR app to Azure Web App - StudentSpringBootWebApp
 
 on:
   push:
@@ -45,7 +19,7 @@ jobs:
       - name: Set up Java version
         uses: actions/setup-java@v1
         with:
-          java-version: '8'
+          java-version: '17'
 
       - name: Build with Maven
         run: mvn clean install
@@ -73,7 +47,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'StudentSpringBootApp'
+          app-name: 'StudentSpringBootWebApp'
           slot-name: 'production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_accbcfe4e5164e918f294377934d2a40 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_7583c787dd78499dbad132230b707f1d }}
