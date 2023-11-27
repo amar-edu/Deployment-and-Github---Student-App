@@ -1,13 +1,3 @@
-You're now in the production slot, which is not recommended for setting up CI/CD.Learn more
-Deploy and build code from your preferred source and build provider. Learn more
-
-Source*
-Building with GitHub Actions.Change provider.
-GitHub
-App Service will place a GitHub Actions workflow in your chosen repository to build and deploy your app whenever there is a commit on the chosen branch. If you can't find an organization or repository, you may need to enable additional permissions on GitHub. You must have write access to your chosen GitHub repository to deploy with GitHub Actions. Learn more
-
-Signed in as
-amar-eduChange Account
 Organization*
 amar-edu
 Repository*
